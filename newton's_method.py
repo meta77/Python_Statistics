@@ -37,6 +37,22 @@ for _ in range(100):
 print(f"最適な直線: y = {a:.1f}x + {b:.1f}")
 # 出力: 最適な直線: y = 10.0x + 40.0
 
+
+'''
+勾配ベクトルの定義式
+\[
+\nabla E = \begin{bmatrix}
+\frac{\partial E}{\partial a} \\
+\frac{\partial E}{\partial b}
+\end{bmatrix}
+= \begin{bmatrix}
+-2 \sum_{i=1}^n x_i (y_i - (a x_i + b)) \\
+-2 \sum_{i=1}^n (y_i - (a x_i + b))
+\end{bmatrix}
+\]
+'''
+
+
 '''
 更新式
 \[
