@@ -36,3 +36,20 @@ for _ in range(100):
 
 print(f"最適な直線: y = {a:.1f}x + {b:.1f}")
 # 出力: 最適な直線: y = 10.0x + 40.0
+
+'''
+更新式
+\[
+\begin{bmatrix}
+a_{\text{new}} \\
+b_{\text{new}}
+\end{bmatrix}
+= \begin{bmatrix}
+a \\
+b
+\end{bmatrix}
+- H^{-1} \nabla E
+\]
+
+
+'''
