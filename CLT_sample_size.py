@@ -1,3 +1,9 @@
+# 試行ごとのサンプルサイズが気になる。実験したい。
+
+# 試行ごとのサンプル数を、10〜50の間でランダムにする。
+# 試行回数を100回、1000回、10000回にする。
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
