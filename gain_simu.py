@@ -20,7 +20,7 @@ money_history = [money]
 # シミュレーション本体
 # ----------------------------
 for _ in range(num_trials):
-    if np.random.rand() < win_rate:
+    if np.random.rand() < win_rate: # 0以上1未満の乱数（float型の実数）を1個生成する
         # 勝った場合
         money *= (1 + gain)
     else:
