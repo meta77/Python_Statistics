@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # パラメータの設定
 # ----------------------------
 initial_money = 50000            # 初期資金（円）
-win_rate = 0.85                # 勝率（85%）
+win_rate = 0.85                # 勝率
 gain = 0.09                     # 勝ったときの利益（+4%）
 loss = -0.1                  # 負けたときの損失（-5%）
 num_trials = 50          # 取引回数（シミュレーション回数）
