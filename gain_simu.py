@@ -26,7 +26,7 @@ for _ in range(num_trials):
     else:
         # 負けた場合
         money *= (1 + loss)
-    money_history.append(money)
+    money_history.append(money) # 取引の履歴
 
 print(money)
 print(money_history)
