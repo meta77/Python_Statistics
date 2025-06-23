@@ -9,6 +9,9 @@ win_rate = 0.85                # 勝率
 gain = 0.09                     # 勝ったときの利益　（%）
 loss = -0.1                  # 負けたときの損失（%）
 num_trials = 50          # 取引回数（シミュレーション回数）
+two = 0
+money100 = 1000000
+money1000 = 10000000
 
 # ----------------------------
 # シミュレーションの準備
@@ -19,7 +22,7 @@ money_history = [money]
 # ----------------------------
 # シミュレーション本体
 # ----------------------------
-for _ in range(num_trials):
+for i in range(num_trials):
     if np.random.rand() < win_rate: # 0以上1未満の乱数（float型の実数）を1個生成する
         # 勝った場合
         money *= (1 + gain)
@@ -27,6 +30,8 @@ for _ in range(num_trials):
         # 負けた場合
         money *= (1 + loss)
     money_history.append(money) # 取引の履歴
+
+    if
 
 print(money)
 print(money_history)
