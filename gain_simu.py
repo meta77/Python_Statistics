@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 # パラメータの設定
 # ----------------------------
 initial_money = 50000            # 初期資金（円）
-win_rate = 0.85                # 勝率
-gain = 0.09                     # 勝ったときの利益　（%）
-loss = -0.1                  # 負けたときの損失（%）
-num_trials = 50          # 取引回数（シミュレーション回数）
+win_rate = 0.80               # 勝率
+gain = 0.04                     # 勝ったときの利益　（%）
+loss = -0.05                  # 負けたときの損失（%）
+num_trials = 150         # 取引回数（シミュレーション回数）
 two = 0
-money100 = 1000000
-money1000 = 10000000
+money100 = 0
+money1000 = 0
 
 # ----------------------------
 # シミュレーションの準備
@@ -31,7 +31,10 @@ for i in range(num_trials):
         money *= (1 + loss)
     money_history.append(money) # 取引の履歴
 
-    if
+    if money >= 1000000:
+        if money100 = 0:
+            money100 = i
+
 
 print(money)
 print(money_history)
