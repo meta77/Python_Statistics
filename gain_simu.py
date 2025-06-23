@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 # ----------------------------
 initial_money = 50000            # 初期資金（円）
 win_rate = 0.80               # 勝率
-gain = 0.04                     # 勝ったときの利益　（%）
-loss = -0.05                  # 負けたときの損失（%）
-num_trials = 150         # 取引回数（シミュレーション回数）
+gain = 0.18                  # 勝ったときの利益　（%）
+loss = -0.2             # 負けたときの損失（%）
+num_trials = 70     # 取引回数（シミュレーション回数）
 two = 0
 money100 = 0
 money1000 = 0
