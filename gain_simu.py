@@ -32,12 +32,14 @@ for i in range(num_trials):
     money_history.append(money) # 取引の履歴
 
     if money >= 1000000:
-        if money100 = 0:
+        if money100 == 0:
             money100 = i
 
 
 print(money)
+print(money100)
 print(money_history)
+
 
 # ----------------------------
 # 結果のプロット
