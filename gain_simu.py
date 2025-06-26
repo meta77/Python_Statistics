@@ -43,8 +43,11 @@ for i in range(num_trials):
 
 # 結果の見た目をわかりやすくする
 def convert_to_yen_unit_with_commas(n):
-    if not isinstance(n, int):
-        raise ValueError("整数で入力してください")
+    # 小数点以下はすべて無視（切り捨て）
+    if not isinstance(n, (int, float)):
+        raise ValueError("数値（intまたはfloat）で入力してください")
+
+    n = int(n)  # 小数点以下を切り捨て
 
     units = [
         (10**12, '兆'),
@@ -60,6 +63,7 @@ def convert_to_yen_unit_with_commas(n):
     if n > 0 or result == "":
         result += format(n, ',')
     return result
+
 
 
 
