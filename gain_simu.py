@@ -35,8 +35,13 @@ for i in range(num_trials):
         if money100 == 0:
             money100 = i
 
+    if money >= 10000000:
+        if money1000 == 0:
+            money1000 = i
+
 
 print(money)
+print(money100)
 print(money100)
 print(money_history)
 
