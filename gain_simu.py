@@ -8,7 +8,7 @@ initial_money = 50000            # 初期資金（円）
 win_rate = 0.80               # 勝率
 gain = 0.08              # 勝ったときの利益　（%）
 loss = -0.1       # 負けたときの損失（%）
-num_trials = 70   # 取引回数（シミュレーション回数）
+num_trials = 140   # 取引回数（シミュレーション回数）
 two = 0
 money100 = 0
 money1000 = 0
@@ -40,7 +40,32 @@ for i in range(num_trials):
             money1000 = i
 
 
+
+# 結果の見た目をわかりやすくする
+def convert_to_yen_unit_with_commas(n):
+    if not isinstance(n, int):
+        raise ValueError("整数で入力してください")
+
+    units = [
+        (10**12, '兆'),
+        (10**8, '億'),
+        (10**4, '万'),
+    ]
+
+    result = ""
+    for unit_value, unit_name in units:
+        if n >= unit_value:
+            quotient, n = divmod(n, unit_value)
+            result += f"{format(quotient, ',')}{unit_name}"
+    if n > 0 or result == "":
+        result += format(n, ',')
+    return result
+
+
+
+
 print('現在の価格：', money)
+print('変換：', convert_to_yen_unit_with_commas(money))
 print('100万を超えた回数：', money100)
 print('1000万を超えた回数：', money1000)
 print('取引履歴：', money_history)
