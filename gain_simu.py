@@ -40,10 +40,10 @@ for i in range(num_trials):
             money1000 = i
 
 
-print(money)
-print(money100)
-print(money100)
-print(money_history)
+print('現在の価格：', money)
+print('100万を超えた回数：', money100)
+print('1000万を超えた回数：', money1000)
+print('取引履歴：', money_history)
 
 
 # ----------------------------
