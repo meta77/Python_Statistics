@@ -8,7 +8,7 @@ initial_money = 50000            # 初期資金（円）
 win_rate = 0.80               # 勝率
 gain = 0.08             # 勝ったときの利益　（%）
 loss = -0.1    # 負けたときの損失（%）
-num_trials = 70  # 取引回数（シミュレーション回数）
+num_trials = 144  # 取引回数（シミュレーション回数）
 two = 0
 money100 = 0
 money1000 = 0
@@ -75,9 +75,9 @@ def convert_to_yen_unit_with_commas(n):
 print('現在の価格：', money)
 print('変換：', convert_to_yen_unit_with_commas(money))
 print('2倍になるまでかかった回数：', money2)
-print('100万を超えた回数：', money100)
-print('1000万を超えた回数：', money1000)
-print('取引履歴：', money_history)
+print('100万を超えるまでにかかった回数：', money100)
+print('1000万を超えるまでにかかった回数：', money1000)
+# print('取引履歴：', money_history)
 
 
 # ----------------------------
