@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import statistics
+import math
 
 # ----------------------------
 # パラメータの設定
