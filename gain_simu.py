@@ -79,6 +79,8 @@ def convert_to_yen_unit_with_commas(n):
 
 
 print(money_list)
+print(statistics.mean(money_list))
+print(statistics.pvariance(money_list))
 
 
 '''
