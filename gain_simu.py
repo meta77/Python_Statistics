@@ -77,6 +77,8 @@ def convert_to_yen_unit_with_commas(n):
 
 print(money_list)
 
+
+'''
 print('現在の価格：', money)
 print('変換：', convert_to_yen_unit_with_commas(money))
 print('2倍になるまでかかった回数：', money2)
@@ -97,3 +99,4 @@ plt.ylabel("資金（円）")
 plt.legend()
 plt.grid(True)
 plt.show()
+'''
