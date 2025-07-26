@@ -14,36 +14,41 @@ money100 = 0
 money1000 = 0
 money2 = 0
 
+money_list = []
+
 # ----------------------------
 # シミュレーションの準備
 # ----------------------------
 money = initial_money
 money_history = [money]
 
+
+for n in range(100):
 # ----------------------------
 # シミュレーション本体
 # ----------------------------
-for i in range(num_trials):
-    if np.random.rand() < win_rate: # 0以上1未満の乱数（float型の実数）を1個生成する
+    for i in range(num_trials):
+        if np.random.rand() < win_rate: # 0以上1未満の乱数（float型の実数）を1個生成する
         # 勝った場合
-        money *= (1 + gain)
-    else:
+            money *= (1 + gain)
+        else:
         # 負けた場合
-        money *= (1 + loss)
-    money_history.append(money) # 取引の履歴
+            money *= (1 + loss)
+        money_history.append(money) # 取引の履歴
 
-    if money >= 1000000:
-        if money100 == 0:
-            money100 = i
+        if money >= 1000000:
+            if money100 == 0:
+                money100 = i
 
-    if money >= 10000000:
-        if money1000 == 0:
-            money1000 = i
+        if money >= 10000000:
+            if money1000 == 0:
+                money1000 = i
 
-    if money >= initial_money * 2:
-        if money2 == 0:
-            money2 = i
+        if money >= initial_money * 2:
+            if money2 == 0:
+                money2 = i
 
+    money_list.append(money)
 
 # 結果の見た目をわかりやすくする
 def convert_to_yen_unit_with_commas(n):
@@ -70,7 +75,7 @@ def convert_to_yen_unit_with_commas(n):
 
 
 
-
+print(money_list)
 
 print('現在の価格：', money)
 print('変換：', convert_to_yen_unit_with_commas(money))
