@@ -79,8 +79,8 @@ def convert_to_yen_unit_with_commas(n):
 
 
 print(money_list)
-print('平均:',statistics.mean(money_list))
-print('標準偏差:',statistics.pstdev(money_list))
+print('平均:',convert_to_yen_unit_with_commas(statistics.mean(money_list)))
+print('標準偏差:',convert_to_yen_unit_with_commas(statistics.pstdev(money_list)))
 
 
 '''
