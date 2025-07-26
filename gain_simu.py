@@ -49,6 +49,7 @@ for n in range(100):
                 money2 = i
 
     money_list.append(money)
+    money = initial_money
 
 # 結果の見た目をわかりやすくする
 def convert_to_yen_unit_with_commas(n):
