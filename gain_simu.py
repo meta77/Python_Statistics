@@ -81,7 +81,8 @@ def convert_to_yen_unit_with_commas(n):
 print(money_list)
 print('平均:',convert_to_yen_unit_with_commas(statistics.mean(money_list)))
 print('標準偏差:',convert_to_yen_unit_with_commas(statistics.pstdev(money_list)))
-
+print('最大値:',convert_to_yen_unit_with_commas(max(money_list)))
+print('最小値:',convert_to_yen_unit_with_commas(min(money_list)))
 
 '''
 print('現在の価格：', money)
