@@ -137,3 +137,9 @@ plt.hist(data, bins=10, density=True, alpha=0.5, label='Data')
 plt.plot(x, pdf_fitted, 'r-', label=f'{best_dist_name} fit')
 plt.legend()
 plt.show()
+
+
+'''
+p > 0.05 → 分布との整合性を否定できない（その分布は妥当かも）
+p < 0.05 → その分布とは言えない（帰無仮説を棄却）
+'''
