@@ -108,6 +108,7 @@ plt.grid(True)
 plt.show()
 '''
 
+# Kolmogorov-Smirnov検定（KS検定）
 
 data = money_list
 distributions = ['norm', 'expon', 'lognorm', 'gamma', 'beta', 'uniform']
