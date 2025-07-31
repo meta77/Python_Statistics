@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import statistics
 import math
+import scipy.stats as stats
 
 # ----------------------------
 # パラメータの設定
@@ -106,3 +107,32 @@ plt.legend()
 plt.grid(True)
 plt.show()
 '''
+
+
+data = money_list
+distributions = ['norm', 'expon', 'lognorm', 'gamma', 'beta', 'uniform']
+results = []
+
+for dist_name in distributions:
+    dist = getattr(stats, dist_name)
+    params = dist.fit(data)
+    D, p = stats.kstest(data, dist_name, args=params)
+    results.append((dist_name, p, D, params))
+
+
+results.sort(key=lambda x: x[1], reverse=True)  # p値でソート（高いほど適合度が良い）
+
+for name, p, D, params in results:
+    print(f"{name:10s} | p = {p:.4f} | D = {D:.4f} | params = {params}")
+
+
+best_dist_name, _, _, best_params = results[0]
+best_dist = getattr(stats, best_dist_name)
+
+x = np.linspace(min(data), max(data), 100)
+pdf_fitted = best_dist.pdf(x, *best_params[:-2], loc=best_params[-2], scale=best_params[-1])
+
+plt.hist(data, bins=10, density=True, alpha=0.5, label='Data')
+plt.plot(x, pdf_fitted, 'r-', label=f'{best_dist_name} fit')
+plt.legend()
+plt.show()
