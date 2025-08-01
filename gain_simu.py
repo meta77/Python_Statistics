@@ -26,7 +26,7 @@ money = initial_money
 money_history = [money]
 
 
-for n in range(100):
+for n in range(500):
 # ----------------------------
 # シミュレーション本体
 # ----------------------------
