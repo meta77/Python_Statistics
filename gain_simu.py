@@ -8,7 +8,7 @@ import scipy.stats as stats
 # パラメータの設定
 # ----------------------------
 initial_money = 50000            # 初期資金（円）
-win_rate = 0.82           # 勝率
+win_rate = 0.8           # 勝率
 gain = 0.04      # 勝ったときの利益　（%）
 loss = -0.05  # 負けたときの損失（%）
 num_trials = 70  # 取引回数（シミュレーション回数）
